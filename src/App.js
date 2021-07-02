@@ -2,7 +2,8 @@ import HomePage from "./pages/homepage";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { NavBar } from "./components/navbar";
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Aboutpage from "./pages/aboutpage";
 const AppContainer = styled.div`
   ${tw`
   bg-dark-blue
@@ -16,8 +17,16 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <NavBar />
-      <HomePage />
+      <Router>
+        <Route exact path="/">
+          <NavBar />
+          <HomePage />
+        </Route>
+        <Route path="/about">
+          <NavBar />
+          <Aboutpage />
+        </Route>
+      </Router>
     </AppContainer>
   );
 }
