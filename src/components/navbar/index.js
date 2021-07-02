@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 import tw from "twin.macro";
@@ -14,12 +15,7 @@ const NavContainer = styled.div`
 `};
 `;
 
-const Logo = styled.img`
-  ${tw`
-
-
-`};
-`;
+const Logo = styled.img``;
 
 const NavLinkComponent = styled.h3`
   ${tw`
@@ -32,10 +28,19 @@ export const NavBar = () => {
   return (
     <>
       <NavContainer>
-        <Logo src={LogoImage} />
-        <NavLinkComponent>Blogs</NavLinkComponent>
-        <NavLinkComponent>About</NavLinkComponent>
-        <NavLinkComponent>Contact me</NavLinkComponent>
+        <NavLink to="/">
+          <Logo src={LogoImage} />
+        </NavLink>
+
+        <NavLink to="/blogs">
+          <NavLinkComponent>Blogs</NavLinkComponent>
+        </NavLink>
+        <NavLink to="/about">
+          <NavLinkComponent>About</NavLinkComponent>
+        </NavLink>
+        <NavLink to="/contact">
+          <NavLinkComponent>Contact me</NavLinkComponent>
+        </NavLink>
       </NavContainer>
     </>
   );
