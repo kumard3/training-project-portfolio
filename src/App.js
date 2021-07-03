@@ -5,6 +5,7 @@ import { NavBar } from "./components/navbar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Aboutpage from "./pages/aboutpage";
 import Blogs from "./pages/blogspage";
+import { SingleBlog } from "./components/singleblog";
 const AppContainer = styled.div`
   ${tw`
   bg-dark-blue
@@ -33,6 +34,7 @@ function App() {
         </Route>
         <Route path="/blog/:slug">
           <NavBar />
+          <SingleBlog />
         </Route>
       </Router>
     </AppContainer>
