@@ -4,6 +4,7 @@ import tw from "twin.macro";
 import { NavBar } from "./components/navbar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Aboutpage from "./pages/aboutpage";
+import Blogs from "./pages/blogspage";
 const AppContainer = styled.div`
   ${tw`
   bg-dark-blue
@@ -25,6 +26,13 @@ function App() {
         <Route path="/about">
           <NavBar />
           <Aboutpage />
+        </Route>
+        <Route path="/blogs">
+          <NavBar />
+          <Blogs/>
+        </Route>
+        <Route path="/blog/:slug">
+          <NavBar />
         </Route>
       </Router>
     </AppContainer>
