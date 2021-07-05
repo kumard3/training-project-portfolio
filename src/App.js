@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Aboutpage from "./pages/aboutpage";
 import Blogs from "./pages/blogspage";
 import { SingleBlog } from "./components/singleblog";
+import ContactPage from "./pages/contactpage";
 const AppContainer = styled.div`
   ${tw`
   bg-dark-blue
@@ -30,11 +31,15 @@ function App() {
         </Route>
         <Route path="/blogs">
           <NavBar />
-          <Blogs/>
+          <Blogs />
         </Route>
         <Route path="/blog/:slug">
           <NavBar />
           <SingleBlog />
+        </Route>
+        <Route path="/contact">
+          <NavBar />
+          <ContactPage />
         </Route>
       </Router>
     </AppContainer>
