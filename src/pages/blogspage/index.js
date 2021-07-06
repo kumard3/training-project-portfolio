@@ -43,6 +43,9 @@ mb-10
 `;
 
 const BlogCardsContainer = styled.div`
+  &::-webkit-scrollbar {
+    display: none;
+  }
   ${tw`
   flex
   flex-wrap
