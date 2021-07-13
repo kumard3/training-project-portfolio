@@ -19,6 +19,11 @@ const HomeContainerLeft = styled.div`
  justify-center
  items-center
 `};
+
+  @media (max-width: 1080px) {
+    position: relative;
+    z-index: 2;
+  }
 `;
 
 const IntroContainer = styled.div`
@@ -27,6 +32,9 @@ flex
 flex-col
 ml-48
 `};
+  @media (max-width: 1080px) {
+    margin-left: 1rem;
+  }
 `;
 
 const BigText = styled.h1`
@@ -34,6 +42,9 @@ const BigText = styled.h1`
 text-white
 text-8xl
 `};
+  @media (max-width: 1080px) {
+    font-size: 3rem;
+  }
 `;
 
 const MiddleText = styled.h1`
@@ -61,6 +72,10 @@ const HomeContainerRight = styled.div`
   w-full
 
 `};
+  @media (max-width: 1080px) {
+    position: absolute;
+    z-index: 1;
+  }
 `;
 const SocialIconContainer = styled.div`
   ${tw`
@@ -69,11 +84,17 @@ justify-center
 ml-96
 
 `};
+  @media (max-width: 1080px) {
+    margin-left: 49vw;
+  }
 `;
 
 const ProfileImageContainer = styled.img`
   height: 80vh;
   background-blend-mode: screen;
+  @media (max-width: 1080px) {
+    opacity: 0.5;
+  }
 `;
 
 const HomePage = () => {

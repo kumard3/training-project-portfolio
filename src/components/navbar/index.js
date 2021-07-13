@@ -13,6 +13,9 @@ const NavContainer = styled.div`
     w-1/2
     h-24
 `};
+@media (max-width:1080px){
+  width:auto;
+}
 `;
 
 const Logo = styled.img``;
