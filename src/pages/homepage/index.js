@@ -42,8 +42,13 @@ const BigText = styled.h1`
 text-white
 text-8xl
 `};
-  @media (max-width: 1080px) {
+  @media (max-width: 500px) {
     font-size: 3rem;
+
+  }
+  @media (min-width:500px)and(max-width: 1080px) {
+    font-size: 4rem;
+
   }
 `;
 
@@ -52,6 +57,9 @@ const MiddleText = styled.h1`
 text-middle-text
 text-4xl
 `};
+@media(max-width:500px){
+  font-size:2rem;
+}
 `;
 const Button = styled.button`
   border: 2px solid #0fd1fc;
@@ -94,6 +102,7 @@ const ProfileImageContainer = styled.img`
   background-blend-mode: screen;
   @media (max-width: 1080px) {
     opacity: 0.5;
+    height: 77vh;
   }
 `;
 
